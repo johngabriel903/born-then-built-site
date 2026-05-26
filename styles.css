@@ -51,10 +51,7 @@ button { font-family: inherit; }
 
 .logo.small { font-size: 18px; }
 
-.nav {
-  display: flex;
-  gap: 36px;
-}
+.nav { display: flex; gap: 36px; }
 
 .nav button,
 .footerLinks button {
@@ -327,10 +324,7 @@ button { font-family: inherit; }
   color: rgba(255,255,255,.5);
 }
 
-.footerLinks {
-  display: flex;
-  gap: 32px;
-}
+.footerLinks { display: flex; gap: 32px; }
 
 .footer p {
   margin: 0;
@@ -339,9 +333,10 @@ button { font-family: inherit; }
   text-transform: uppercase;
 }
 
-/* MOBILE OPTIMIZATION */
+/* MOBILE IMAGE-FIRST LAYOUT */
 @media (max-width: 900px) {
   .header {
+    position: sticky;
     height: auto;
     min-height: 76px;
     padding: 16px 18px;
@@ -363,33 +358,46 @@ button { font-family: inherit; }
   }
 
   .hero {
-    min-height: 880px;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    overflow: visible;
+    background: #000;
   }
 
   .heroImage {
-    top: 76px;
-    width: 100%;
-    height: 58%;
-    right: 0;
+    position: relative;
+    top: auto;
+    right: auto;
     bottom: auto;
-    opacity: .58;
+    width: 100%;
+    height: 430px;
+    background-image:
+      linear-gradient(180deg, rgba(0,0,0,.06) 0%, rgba(0,0,0,.18) 55%, #000 100%),
+      url('/hero-image.jpg');
     background-size: cover;
-    background-position: 58% 18%;
+    background-position: center 18%;
     filter: grayscale(1);
+    opacity: .92;
+    order: 1;
   }
 
   .heroOverlay {
-    background:
-      linear-gradient(180deg, rgba(0,0,0,.16) 0%, rgba(0,0,0,.34) 34%, rgba(0,0,0,.86) 58%, #000 78%),
-      linear-gradient(90deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.28) 54%, rgba(0,0,0,.15) 100%);
+    display: none;
   }
 
   .heroContent {
-    padding: 500px 22px 64px;
+    order: 2;
+    position: relative;
+    z-index: 2;
+    padding: 28px 22px 64px;
+    margin: 0;
+    width: 100%;
   }
 
   .heroContent h1 {
-    max-width: 360px;
+    max-width: 365px;
     font-size: clamp(46px, 15vw, 64px);
     line-height: .88;
     letter-spacing: -.055em;
@@ -407,7 +415,7 @@ button { font-family: inherit; }
   }
 
   .bodyCopy {
-    max-width: 330px;
+    max-width: 340px;
     font-size: 15px;
     line-height: 1.7;
   }
@@ -493,20 +501,23 @@ button { font-family: inherit; }
 }
 
 @media (max-width: 430px) {
-  .hero { min-height: 850px; }
-
   .heroImage {
-    height: 55%;
-    background-position: 55% 12%;
-    opacity: .62;
+    height: 405px;
+    background-position: center 13%;
   }
 
-  .heroContent { padding-top: 470px; }
-
-  .heroContent h1 { font-size: 48px; }
+  .heroContent h1 {
+    font-size: 48px;
+  }
 }
 
 @media (max-width: 380px) {
-  .heroContent h1 { font-size: 42px; }
-  .heroContent { padding-top: 455px; }
+  .heroImage {
+    height: 385px;
+    background-position: center 10%;
+  }
+
+  .heroContent h1 {
+    font-size: 42px;
+  }
 }

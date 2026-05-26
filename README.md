@@ -10,7 +10,7 @@ Vite + React deployable site for Born Then Built.
 
 ## Update
 
-This version includes improved mobile hero framing, mobile typography, and responsive spacing.
+This version uses an image-first mobile hero layout so the photo is visible above the text instead of hidden behind the words.
 
 ## Local preview
 
