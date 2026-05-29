@@ -44,7 +44,7 @@ const pages = {
 function App() {
   const [page, setPage] = useState("home");
   const active = pages[page];
-  const nav = ["home", "compounds", "blog", "about", "contact"];
+  const nav = ["home", "compounds", "blog", "about", "contact", "instagram"];
 
   return (
     <div className="site">
@@ -54,15 +54,26 @@ function App() {
         </button>
 
         <nav className="nav">
-          {nav.map((item) => (
-            <button
-              key={item}
-              onClick={() => setPage(item)}
-              className={page === item ? "active" : ""}
-            >
-              {item}
-            </button>
-          ))}
+        {nav.map((item) =>
+  item === "instagram" ? (
+    <a
+      key={item}
+      href="https://instagram.com/theofficialjohngabriel"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      @theofficialjohngabriel
+    </a>
+  ) : (
+    <button
+      key={item}
+      onClick={() => setPage(item)}
+      className={page === item ? "active" : ""}
+    >
+      {item}
+    </button>
+  )
+)}
         </nav>
       </header>
 
