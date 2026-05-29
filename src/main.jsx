@@ -61,7 +61,8 @@ function App() {
       href="https://instagram.com/theofficialjohngabriel"
       target="_blank"
       rel="noopener noreferrer"
-    >
+      className="nav-instagram"
+>
       @theofficialjohngabriel
     </a>
   ) : (
