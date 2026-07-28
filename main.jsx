@@ -67,32 +67,50 @@ function App() {
       </header>
 
       <main>
-        <section className="hero">
-          <div className="heroImage" />
-          <div className="heroOverlay" />
+<section className="hero">
+  <div className="heroGlow" />
 
-          <div className="heroContent">
-            <p className="kicker">{active.kicker}</p>
-            <h1>{active.title}</h1>
-            <div className="goldLine" />
-            <p className="bodyCopy">{active.body}</p>
+  <div className="heroContent">
+    <div className="heroCopy">
+      <p className="kicker">Precision. Quality. Results.</p>
 
-            {active.items.length > 0 && (
-              <div className="dynamicItems">
-                {active.items.map((item) => (
-                  <div className="dynamicItem" key={item}>
-                    <ArrowRight size={15} />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-            )}
+      <h1>
+        Research
+        <span>Without</span>
+        Compromise
+      </h1>
 
-            <button className="outlineBtn">
-              Live the standard <ArrowRight size={17} />
-            </button>
-          </div>
-        </section>
+      <div className="goldLine" />
+
+      <p className="bodyCopy">
+        Research compounds built on transparency, independent
+        verification, and uncompromising quality standards.
+      </p>
+
+      <button
+        className="primaryBtn"
+        onClick={() => setPage("compounds")}
+      >
+        Explore Compounds
+        <ArrowRight size={17} />
+      </button>
+
+      <div className="heroTrust">
+        <span>Third-Party Tested</span>
+        <span>Research Use Only</span>
+      </div>
+    </div>
+
+    <div className="productVisual">
+      <div className="productHalo" />
+
+      <img
+        src="/product-hero.png"
+        alt="Born Then Built GLP-3RT research compound"
+      />
+    </div>
+  </div>
+</section>
 
         <section className="foundation">
           <p className="kicker center">Our Foundation</p>
