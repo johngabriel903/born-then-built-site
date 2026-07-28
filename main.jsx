@@ -105,7 +105,7 @@ function App() {
       <div className="productHalo" />
 
       <img
-        src="/product-hero-final.png"
+        src="/product-hero.finalone.png"
         alt="Born Then Built GLP-3RT research compound"
       />
     </div>
