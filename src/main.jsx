@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import { ArrowRight, FlaskConical, BookOpen, Shield, Brain, Crown } from "lucide-react";
 import "./styles.css";
+import productHero from "../product-hero.png";
 
 const pages = {
   home: {
