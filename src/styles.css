@@ -756,7 +756,7 @@ button { font-family: inherit; }
   filter:
     drop-shadow(0 28px 36px rgba(0, 0, 0, 0.7))
     drop-shadow(0 0 28px rgba(199, 162, 74, 0.055));
-  animation: productFloat 6s ease-in-out infinite;
+  animation: productFloat 10s ease-in-out infinite;
 }
 
 @keyframes productFloat {
@@ -766,7 +766,7 @@ button { font-family: inherit; }
   }
 
   50% {
-    transform: translateY(-9px);
+    transform: translateY(-4px);
   }
 }
 
