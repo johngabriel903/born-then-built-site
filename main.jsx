@@ -104,17 +104,10 @@ function App() {
     <div className="productVisual">
       <div className="productHalo" />
 
-      <img
-        <img
+     <img
   src="/product-hero.finalone.png"
-  alt="test"
-  style={{
-    width: "700px",
-    border: "4px solid red"
-  }}
+  alt="Born Then Built GLP-3RT research compound"
 />
-        alt="Born Then Built GLP-3RT research compound"
-      />
     </div>
   </div>
 </section>
