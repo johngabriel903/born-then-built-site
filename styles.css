@@ -832,3 +832,23 @@ button { font-family: inherit; }
     max-height: 390px;
   }
 }
+/* FINAL PRODUCT IMAGE CLEANUP */
+.productVisual {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+.productVisual img {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  display: block;
+  object-fit: contain;
+}
+
+.productHalo {
+  display: none !important;
+}
