@@ -102,10 +102,10 @@ function App() {
     </div>
 
     <div className="productVisual">
-      <div className="productHalo" />
+      
 
      <img
-  src="/product-hero.finalone.png"
+  src="/2ndproduct-hero.v2.png"
   alt="Born Then Built GLP-3RT research compound"
 />
     </div>
