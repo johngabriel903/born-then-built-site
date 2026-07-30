@@ -862,3 +862,19 @@ button { font-family: inherit; }
     max-height: 390px;
   }
 }
+.productVisual {
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+.productImage {
+  display: block;
+  width: min(100%, 760px);
+  height: auto;
+  opacity: 1 !important;
+  background: transparent !important;
+  filter: none !important;
+  box-shadow: none !important;
+  object-fit: contain;
+}
