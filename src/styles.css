@@ -878,3 +878,51 @@ button { font-family: inherit; }
   box-shadow: none !important;
   object-fit: contain;
 }
+/* FINAL PRODUCT IMAGE RESET */
+
+.productVisual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+
+  border: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+}
+
+.productImage,
+.productVisual img {
+  display: block;
+
+  width: min(100%, 760px);
+  height: auto;
+
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+
+  border: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+
+  object-fit: contain;
+}
+
+.productVisual::before,
+.productVisual::after {
+  content: none !important;
+  display: none !important;
+}
+
+.productHalo {
+  display: none !important;
+}
