@@ -115,13 +115,12 @@ function App() {
     </div>
 
     <div className="productVisual">
-      <div className="productHalo" />
-
-      <img
-        src={productHero}
-        alt="Born Then Built GLP-3RT research compound"
-      />
-    </div>
+  <img
+    className="productImage"
+    src={productHero}
+    alt="Born Then Built GLP-3RT research compound"
+  />
+</div>
   </div>
 </section>
         
