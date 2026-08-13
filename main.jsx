@@ -27,6 +27,13 @@ const pages = {
       "Longevity Is Not a Trend. It Is Responsibility."
     ]
   },
+coa: {
+  title: "Certificates of Analysis",
+  kicker: "Independent Testing",
+  body: "View current third-party testing and quality documentation for Born Then Built compounds.",
+  items: []
+},
+  
   about: {
     title: "About Born Then Built",
     kicker: "The Standard",
@@ -44,7 +51,7 @@ const pages = {
 function App() {
   const [page, setPage] = useState("home");
   const active = pages[page];
-  const nav = ["home", "compounds", "blog", "about", "contact"];
+  const nav = ["home", "compounds", "blog", "coa", "about", "contact"];
 
   return (
     <div className="site">
@@ -67,6 +74,8 @@ function App() {
       </header>
 
       <main>
+        {page === "home" ? (
+  <>
 <section className="hero">
   <div className="heroGlow" />
 
@@ -145,6 +154,23 @@ function App() {
           <h3>We reject passivity. We reject weakness. We reject victimhood. We build ourselves so we can build others.</h3>
           <p className="tagline">Built on discipline. Backed by science.</p>
         </section>
+        </>
+  ) : (
+    <section className="standardPage">
+      <p className="kicker">{active.kicker}</p>
+      <h1>{active.title}</h1>
+      <div className="goldLine" />
+      <p className="bodyCopy">{active.body}</p>
+
+      {active.items?.length > 0 && (
+        <div className="pageItems">
+          {active.items.map((item) => (
+            <div key={item}>{item}</div>
+          ))}
+        </div>
+      )}
+    </section>
+  )}
       </main>
 
       <footer className="footer">
