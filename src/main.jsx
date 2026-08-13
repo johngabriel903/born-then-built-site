@@ -27,6 +27,12 @@ const pages = {
       "Discipline in a World Designed to Distract",
       "Longevity Is Not a Trend. It Is Responsibility."
     ]
+    coa: {
+  title: "Certificates of Analysis",
+  kicker: "Independent Testing",
+  body: "View current third-party testing and quality documentation for Born Then Built compounds.",
+  items: []
+},
   },
   about: {
     title: "About Born Then Built",
@@ -45,7 +51,7 @@ const pages = {
 function App() {
   const [page, setPage] = useState("home");
   const active = pages[page];
-  const nav = ["home", "compounds", "blog", "about", "contact", "instagram"];
+  const nav = ["home", "compounds", "blog", "coa", "about", "contact", "instagram"];
 
   return (
     <div className="site">
@@ -59,12 +65,12 @@ function App() {
   item === "instagram" ? (
     <a
       key={item}
-      href="https://instagram.com/theofficialjohngabriel"
+      href="https://instagram.com/bornthenbuilt"
       target="_blank"
       rel="noopener noreferrer"
       className="nav-instagram"
 >
-      @theofficialjohngabriel
+      @bornthenbuilt
     </a>
   ) : (
     <button
@@ -80,6 +86,8 @@ function App() {
       </header>
 
       <main>
+  {page === "home" ? (
+    <>
        <section className="hero">
   <div className="heroGlow" />
 
@@ -158,8 +166,36 @@ function App() {
           <h3>We reject passivity. We reject weakness. We reject victimhood. We build ourselves so we can build others.</h3>
           <p className="tagline">Built on discipline. Backed by science.</p>
         </section>
-      </main>
+      </>
+    ) : (
+      <section className="standardPage">
+        <p className="kicker">{active.kicker}</p>
+        <h1>{active.title}</h1>
+        <div className="goldLine" />
+        <p className="bodyCopy">{active.body}</p>
 
+        {page === "coa" ? (
+          <div className="pageItems">
+            <a href="/coa/glp-3rt/batch-001/BTB%20RT%201001%20CHNS%20Mass%20Report%20Test.pdf" target="_blank" rel="noopener noreferrer">CHNS Mass Report</a>
+            <a href="/coa/glp-3rt/batch-001/BTB%20RT%201001%20Endotoxin%20Test.pdf" target="_blank" rel="noopener noreferrer">Endotoxin Test</a>
+            <a href="/coa/glp-3rt/batch-001/BTB%20RT%201001%20Heavy%20Metals%20Test.pdf" target="_blank" rel="noopener noreferrer">Heavy Metals Test</a>
+            <a href="/coa/glp-3rt/batch-001/BTB%20RT%201001%20Sterility%20Test.pdf" target="_blank" rel="noopener noreferrer">Sterility Test</a>
+            <a href="/coa/glp-3rt/batch-001/BTB%20RT-1001%20Blind%20GLP%20Test.pdf" target="_blank" rel="noopener noreferrer">Blind GLP Test</a>
+            <a href="/coa/glp-3rt/batch-001/BTB%20RT-1001%20Fentanyl%20Free%20Test.pdf" target="_blank" rel="noopener noreferrer">Fentanyl-Free Test</a>
+            <a href="/coa/glp-3rt/batch-001/BTB%20RT-1001%20LCMS%20Test.pdf" target="_blank" rel="noopener noreferrer">LCMS Test</a>
+          </div>
+        ) : (
+          active.items?.length > 0 && (
+            <div className="pageItems">
+              {active.items.map((item) => (
+                <div key={item}>{item}</div>
+              ))}
+            </div>
+          )
+        )}
+      </section>
+    )}
+  </main>
       <footer className="footer">
         <div className="logo small">BORN<br />THEN<br />BUILT</div>
         <div className="footerLinks">
