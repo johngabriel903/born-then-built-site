@@ -27,12 +27,12 @@ const pages = {
       "Discipline in a World Designed to Distract",
       "Longevity Is Not a Trend. It Is Responsibility."
     ]
+      },
     coa: {
   title: "Certificates of Analysis",
   kicker: "Independent Testing",
   body: "View current third-party testing and quality documentation for Born Then Built compounds.",
   items: []
-},
   },
   about: {
     title: "About Born Then Built",
