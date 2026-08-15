@@ -174,25 +174,159 @@ function App() {
         <div className="goldLine" />
         <p className="bodyCopy">{active.body}</p>
 
-        {page === "coa" ? (
-          <div className="pageItems">
-            <a href="/coa/glp-3rt/batch-001/BTB%20RT%201001%20CHNS%20Mass%20Report%20Test.pdf" target="_blank" rel="noopener noreferrer">CHNS Mass Report</a>
-            <a href="/coa/glp-3rt/batch-001/BTB%20RT%201001%20Endotoxin%20Test.pdf" target="_blank" rel="noopener noreferrer">Endotoxin Test</a>
-            <a href="/coa/glp-3rt/batch-001/BTB%20RT%201001%20Heavy%20Metals%20Test.pdf" target="_blank" rel="noopener noreferrer">Heavy Metals Test</a>
-            <a href="/coa/glp-3rt/batch-001/BTB%20RT%201001%20Sterility%20Test.pdf" target="_blank" rel="noopener noreferrer">Sterility Test</a>
-            <a href="/coa/glp-3rt/batch-001/BTB%20RT-1001%20Blind%20GLP%20Test.pdf" target="_blank" rel="noopener noreferrer">Blind GLP Test</a>
-            <a href="/coa/glp-3rt/batch-001/BTB%20RT-1001%20Fentanyl%20Free%20Test.pdf" target="_blank" rel="noopener noreferrer">Fentanyl-Free Test</a>
-            <a href="/coa/glp-3rt/batch-001/BTB%20RT-1001%20LCMS%20Test.pdf" target="_blank" rel="noopener noreferrer">LCMS Test</a>
-          </div>
-        ) : (
-          active.items?.length > 0 && (
-            <div className="pageItems">
-              {active.items.map((item) => (
-                <div key={item}>{item}</div>
-              ))}
-            </div>
-          )
-        )}
+       {page === "coa" ? (
+  <div className="coaDashboard">
+
+    <div className="coaBatchSummary">
+      <div className="coaBatchColumn">
+        <span className="coaLabel">Product</span>
+        <strong>GLP-3RT</strong>
+        <small>Retatrutide</small>
+      </div>
+
+      <div className="coaBatchColumn">
+        <span className="coaLabel">Batch</span>
+        <strong>RT-1001</strong>
+        <small>Tested: July 2026</small>
+      </div>
+
+      <div className="coaBatchColumn">
+        <span className="coaLabel">Status</span>
+        <strong className="coaStatus">
+          <span className="coaCheck">✓</span>
+          Testing Complete
+        </strong>
+        <small>Independent Third-Party Analysis</small>
+      </div>
+    </div>
+
+    <div className="coaReportsHeader">
+      Independent Test Reports
+    </div>
+
+    <div className="coaReportList">
+
+      <a
+        href="/coa/glp-3rt/batch-001/BTB%20RT%201001%20CHNS%20Mass%20Report%20Test.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="coaReport"
+      >
+        <div>
+          <strong>CHNS Mass Report</strong>
+          <span>Elemental composition analysis</span>
+        </div>
+        <span className="coaView">View Report →</span>
+      </a>
+
+      <a
+        href="/coa/glp-3rt/batch-001/BTB%20RT%201001%20Endotoxin%20Test.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="coaReport"
+      >
+        <div>
+          <strong>Endotoxin Test</strong>
+          <span>Bacterial endotoxin analysis</span>
+        </div>
+        <span className="coaView">View Report →</span>
+      </a>
+
+      <a
+        href="/coa/glp-3rt/batch-001/BTB%20RT%201001%20Heavy%20Metals%20Test.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="coaReport"
+      >
+        <div>
+          <strong>Heavy Metals Test</strong>
+          <span>ICP-MS heavy metals screening</span>
+        </div>
+        <span className="coaView">View Report →</span>
+      </a>
+
+      <a
+        href="/coa/glp-3rt/batch-001/BTB%20RT%201001%20Sterility%20Test.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="coaReport"
+      >
+        <div>
+          <strong>Sterility Test</strong>
+          <span>Microbial contamination analysis</span>
+        </div>
+        <span className="coaView">View Report →</span>
+      </a>
+
+      <a
+        href="/coa/glp-3rt/batch-001/BTB%20RT-1001%20Blind%20GLP%20Test.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="coaReport"
+      >
+        <div>
+          <strong>Blind GLP Test</strong>
+          <span>Identity and purity blind analysis</span>
+        </div>
+        <span className="coaView">View Report →</span>
+      </a>
+
+      <a
+        href="/coa/glp-3rt/batch-001/BTB%20RT-1001%20Fentanyl%20Free%20Test.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="coaReport"
+      >
+        <div>
+          <strong>Fentanyl-Free Test</strong>
+          <span>Fentanyl contamination screening</span>
+        </div>
+        <span className="coaView">View Report →</span>
+      </a>
+
+      <a
+        href="/coa/glp-3rt/batch-001/BTB%20RT-1001%20LCMS%20Test.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="coaReport"
+      >
+        <div>
+          <strong>LCMS Test</strong>
+          <span>Liquid chromatography–mass spectrometry</span>
+        </div>
+        <span className="coaView">View Report →</span>
+      </a>
+
+    </div>
+
+    <div className="coaTrust">
+      <div>
+        <strong>Third-Party Tested</strong>
+        <span>Independent laboratory reports</span>
+      </div>
+
+      <div>
+        <strong>Batch Specific</strong>
+        <span>Documentation tied to this batch</span>
+      </div>
+
+      <div>
+        <strong>Transparent</strong>
+        <span>Full reports available for review</span>
+      </div>
+
+      <div>
+        <strong>Quality Focused</strong>
+        <span>Testing documentation made accessible</span>
+      </div>
+    </div>
+
+    <p className="coaDisclaimer">
+      For research purposes only. Not for human consumption.
+    </p>
+
+  </div>
+) : (
       </section>
     )}
   </main>
