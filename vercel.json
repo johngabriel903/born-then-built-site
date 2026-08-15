@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/coa/:path*",
+      "destination": "/"
+    }
+  ]
+}
