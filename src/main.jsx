@@ -327,9 +327,17 @@ function App() {
 
   </div>
 ) : (
-      </section>
-    )}
-  </main>
+  active.items?.length > 0 && (
+    <div className="pageItems">
+      {active.items.map((item) => (
+        <div key={item}>{item}</div>
+      ))}
+    </div>
+  )
+)}
+</section>
+)}
+</main>
       <footer className="footer">
         <div className="logo small">BORN<br />THEN<br />BUILT</div>
         <div className="footerLinks">
