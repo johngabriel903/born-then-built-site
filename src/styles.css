@@ -1165,3 +1165,101 @@ button { font-family: inherit; }
     padding: 18px;
   }
 }
+/* =========================================
+   ABOUT PAGE
+========================================= */
+
+.aboutPage {
+  max-width: 1080px;
+}
+
+.aboutIntro {
+  max-width: 760px;
+  margin-bottom: 64px;
+}
+
+.aboutIntro p {
+  color: rgba(255,255,255,0.68);
+  font-size: 20px;
+  line-height: 1.75;
+}
+
+.aboutPillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(210,170,77,0.25);
+  border-bottom: 1px solid rgba(210,170,77,0.25);
+}
+
+.aboutPillar {
+  padding: 42px 34px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.aboutPillar:last-child {
+  border-right: none;
+}
+
+.aboutPillar span {
+  display: block;
+  margin-bottom: 28px;
+  color: #d2aa4d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.aboutPillar h3 {
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.aboutPillar p {
+  margin: 0;
+  color: rgba(255,255,255,0.52);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.aboutClosing {
+  padding: 90px 0 20px;
+}
+
+.aboutClosing span {
+  color: #d2aa4d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.aboutClosing h2 {
+  margin: 18px 0 0;
+  color: #fff;
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  .aboutPillars {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutPillar {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .aboutPillar:last-child {
+    border-bottom: none;
+  }
+
+  .aboutIntro p {
+    font-size: 17px;
+  }
+}
