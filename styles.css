@@ -852,3 +852,242 @@ button { font-family: inherit; }
 .productHalo {
   display: none !important;
 }
+/* =========================================
+   COA DASHBOARD
+========================================= */
+
+.standardPage {
+  min-height: 82vh;
+  padding: 110px 6vw 120px;
+  background:
+    radial-gradient(circle at 75% 10%, rgba(202, 160, 59, 0.07), transparent 32%),
+    #050505;
+  color: #f5f5f2;
+}
+
+.standardPage > .kicker {
+  color: #d2aa4d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.standardPage > h1 {
+  max-width: 850px;
+  margin: 18px 0 0;
+  font-size: clamp(54px, 7vw, 92px);
+  line-height: 0.94;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+}
+
+.standardPage > .goldLine {
+  width: 90px;
+  height: 1px;
+  margin: 34px 0 26px;
+  background: #d2aa4d;
+}
+
+.standardPage > .bodyCopy {
+  max-width: 650px;
+  margin-bottom: 48px;
+  color: rgba(255,255,255,0.63);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.coaDashboard {
+  max-width: 1050px;
+}
+
+.coaBatchSummary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 44px;
+  border: 1px solid rgba(210,170,77,0.22);
+  background: rgba(255,255,255,0.025);
+}
+
+.coaBatchColumn {
+  padding: 26px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.coaBatchColumn:last-child {
+  border-right: none;
+}
+
+.coaLabel {
+  color: #d2aa4d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.coaBatchColumn strong {
+  font-size: 23px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.coaBatchColumn small {
+  color: rgba(255,255,255,0.52);
+  font-size: 13px;
+}
+
+.coaStatus {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.coaCheck {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #79d84a;
+  border-radius: 50%;
+  color: #79d84a;
+  font-size: 13px;
+}
+
+.coaReportsHeader {
+  margin-bottom: 18px;
+  color: #d2aa4d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.coaReportList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.coaReport {
+  min-height: 82px;
+  padding: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(255,255,255,0.11);
+  background: rgba(255,255,255,0.022);
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.coaReport:hover {
+  border-color: rgba(210,170,77,0.7);
+  background: rgba(210,170,77,0.055);
+  transform: translateY(-1px);
+}
+
+.coaReport > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.coaReport strong {
+  color: #f5f5f2;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.coaReport div span {
+  color: rgba(255,255,255,0.48);
+  font-size: 13px;
+}
+
+.coaView {
+  color: #d2aa4d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.coaTrust {
+  margin-top: 42px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.coaTrust > div {
+  min-height: 130px;
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.coaTrust > div:last-child {
+  border-right: none;
+}
+
+.coaTrust strong {
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.coaTrust span {
+  color: rgba(255,255,255,0.45);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.coaDisclaimer {
+  margin: 26px 0 0;
+  text-align: center;
+  color: rgba(255,255,255,0.32);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 800px) {
+  .standardPage {
+    padding: 88px 22px 80px;
+  }
+
+  .coaBatchSummary {
+    grid-template-columns: 1fr;
+  }
+
+  .coaBatchColumn {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .coaBatchColumn:last-child {
+    border-bottom: none;
+  }
+
+  .coaTrust {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .coaTrust > div:nth-child(2) {
+    border-right: none;
+  }
+
+  .coaReport {
+    padding: 18px;
+  }
+}
