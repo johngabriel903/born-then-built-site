@@ -49,14 +49,31 @@ const pages = {
 };
 
 function App() {
-  const [page, setPage] = useState("home");
+  const [page, setPage] = useState(() => {
+  const path = window.location.pathname;
+
+  if (path === "/coa/glp-3rt/batch-001") {
+    return "coa";
+  }
+
+  return "home";
+});
+  const goToPage = (item) => {
+  if (item === "coa") {
+    window.history.pushState({}, "", "/coa/glp-3rt/batch-001");
+  } else if (item === "home") {
+    window.history.pushState({}, "", "/");
+  }
+
+  setPage(item);
+};
   const active = pages[page];
   const nav = ["home", "compounds", "blog", "coa", "about", "contact", "instagram"];
 
   return (
     <div className="site">
       <header className="header">
-        <button className="logo" onClick={() => setPage("home")} aria-label="Born Then Built home">
+        <button className="logo" onClick={() => goToPage("home")} aria-label="Born Then Built home">
           BORN<br />THEN<br />BUILT
         </button>
 
@@ -75,7 +92,7 @@ function App() {
   ) : (
     <button
       key={item}
-      onClick={() => setPage(item)}
+      onClick={() => goToPage(item)}
       className={page === item ? "active" : ""}
     >
       {item}
