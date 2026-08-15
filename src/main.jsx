@@ -34,12 +34,16 @@ const pages = {
   body: "View current third-party testing and quality documentation for Born Then Built compounds.",
   items: []
   },
-  about: {
-    title: "About Born Then Built",
-    kicker: "The Standard",
-    body: "Born Then Built is a way of life for men who build themselves so they can build everything that matters. Body. Mind. Purpose.",
-    items: ["Built on discipline", "Backed by science", "Designed for men", "Rooted in responsibility"]
-  },
+ about: {
+  title: "Built With Purpose.",
+  kicker: "About Born Then Built",
+  body: "Born Then Built was founded around a simple principle: what you choose to research should come with documentation you can actually examine. We believe quality should not be implied. It should be demonstrated through independent analytical testing, transparent batch documentation, and accessible Certificates of Analysis.",
+  items: [
+    "Independent Testing",
+    "Batch Transparency",
+    "Quality Without the Noise"
+  ]
+},
   contact: {
     title: "Contact",
     kicker: "Connect",
@@ -192,6 +196,53 @@ function App() {
         <p className="bodyCopy">{active.body}</p>
 
        {page === "coa" ? (
+        ) : page === "about" ? (
+  <div className="aboutPage">
+
+    <div className="aboutIntro">
+      <p>
+        Our approach is deliberately focused: source carefully, test independently,
+        document thoroughly, and make the results available.
+      </p>
+    </div>
+
+    <div className="aboutPillars">
+
+      <div className="aboutPillar">
+        <span>01</span>
+        <h3>Independent Testing</h3>
+        <p>
+          Third-party analytical testing provides objective documentation
+          for the compounds we offer.
+        </p>
+      </div>
+
+      <div className="aboutPillar">
+        <span>02</span>
+        <h3>Batch Transparency</h3>
+        <p>
+          Testing documentation is organized by batch so researchers can
+          review information associated with a specific lot.
+        </p>
+      </div>
+
+      <div className="aboutPillar">
+        <span>03</span>
+        <h3>Quality Without the Noise</h3>
+        <p>
+          No exaggerated claims. No unnecessary complexity. Just a disciplined
+          approach to research materials and documentation.
+        </p>
+      </div>
+
+    </div>
+
+    <div className="aboutClosing">
+      <span>Born Then Built</span>
+      <h2>Built on discipline.<br />Backed by science.</h2>
+    </div>
+
+  </div>
   <div className="coaDashboard">
 
     <div className="coaBatchSummary">
