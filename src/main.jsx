@@ -22,11 +22,37 @@ const pages = {
     kicker: "Knowledge Builds Freedom",
     body: "Articles on peptides, testosterone, longevity, recovery, discipline, sleep, money, and masculine responsibility.",
     items: [
-      "Testosterone: The Foundation of Manhood",
-      "Peptides 101: How They Work & Why They Matter",
-      "Discipline in a World Designed to Distract",
-      "Longevity Is Not a Trend. It Is Responsibility."
-    ]
+  {
+    number: "01",
+    category: "PEPTIDE SCIENCE",
+    title: "Peptides 101: How They Work & Why They Matter",
+    excerpt: "A clear introduction to peptides, cellular signaling, receptors, and the science driving modern peptide research."
+  },
+  {
+    number: "02",
+    category: "METABOLIC RESEARCH",
+    title: "Retatrutide: Understanding the Triple-Agonist Approach",
+    excerpt: "Inside the research surrounding simultaneous GLP-1, GIP, and glucagon receptor agonism—and why the approach is drawing attention."
+  },
+  {
+    number: "03",
+    category: "METABOLIC SCIENCE",
+    title: "GLP-1, GIP & Glucagon: The Next Generation of Metabolic Research",
+    excerpt: "From single-receptor agonism to multi-pathway research: understanding the signals shaping the next generation of metabolic science."
+  },
+  {
+    number: "04",
+    category: "DISCIPLINE",
+    title: "Discipline in a World Designed to Distract You",
+    excerpt: "Attention has become a commodity. Discipline is the decision to take yours back."
+  },
+  {
+    number: "05",
+    category: "PERFORMANCE",
+    title: "Sleep Is Performance: Why Recovery Starts at Night",
+    excerpt: "Strength, cognition, recovery and resilience all depend on what happens when the work stops."
+  }
+]
       },
     coa: {
   title: "Certificates of Analysis",
