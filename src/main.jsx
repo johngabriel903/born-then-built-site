@@ -458,7 +458,7 @@ function App() {
 
 ) : null
   )
-)
+)}
 </section>
 )}
 </main>
