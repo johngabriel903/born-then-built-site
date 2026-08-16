@@ -426,12 +426,37 @@ function App() {
   </div>
 
 ) : (
-  active.items?.length > 0 && (
-    <div className="pageItems">
-      {active.items.map((item) => (
-        <div key={item}>{item}</div>
-      ))}
-    </div>
+  page === "blog" ? (
+  <div className="editorialGrid">
+    {active.items.map((article) => (
+      <article className="editorialCard" key={article.number}>
+
+        <div className="editorialMeta">
+          <span>{article.category}</span>
+          <span>{article.number}</span>
+        </div>
+
+        <h2>{article.title}</h2>
+
+        <p>{article.excerpt}</p>
+
+        <button className="editorialLink">
+          READ ARTICLE <span>→</span>
+        </button>
+
+      </article>
+    ))}
+  </div>
+
+) : active.items?.length > 0 ? (
+
+  <div className="pageItems">
+    {active.items.map((item) => (
+      <div key={item}>{item}</div>
+    ))}
+  </div>
+
+) : null
   )
 )}
 </section>
